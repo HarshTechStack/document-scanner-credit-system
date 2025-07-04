@@ -1,0 +1,254 @@
+/* Scan Upload Page Styling */
+.scan-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2d3748 0%, #1f2937 100%); /* Deep indigo gradient */
+  padding: 24px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.scan-card {
+  background: #f7fafc; /* Off-white card */
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.scan-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1f2937; /* Dark slate text */
+  margin-bottom: 12px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.scan-subtext {
+  font-size: 1.3rem;
+  color: #6b7280; /* Light gray subtitle */
+  margin-bottom: 16px;
+}
+
+.scan-description {
+  font-size: 1rem;
+  color: #4b5563; /* Slightly darker gray */
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.credit-link {
+  color: #06b6d4; /* Bright cyan */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.credit-link:hover {
+  color: #0891b2; /* Darker cyan */
+  text-decoration: underline;
+}
+
+.scan-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  color: #6b7280; /* Gray icon */
+}
+
+.scan-input {
+  width: 100%;
+  padding: 12px 16px 12px 40px; /* Space for icon */
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+  background: #ffffff; /* White input background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scan-input:focus {
+  outline: none;
+  border-color: #06b6d4; /* Bright cyan focus */
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+.error-message {
+  color: #ef4444; /* Soft red for errors */
+  font-size: 0.9rem;
+  margin: 12px 0;
+  animation: shake 0.3s ease;
+}
+
+.scan-button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #06b6d4; /* Bright cyan */
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.scan-button:hover {
+  background: #0891b2; /* Darker cyan */
+  transform: scale(1.03);
+}
+
+.scan-button:disabled {
+  background: #9ca3af; /* Gray when disabled */
+  cursor: not-allowed;
+  transform: none;
+}
+
+.result-container {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.result-container h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.scanned-text {
+  background: #ffffff;
+  padding: 16px;
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.credits-info {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 16px;
+}
+
+.matches-container {
+  margin-top: 24px;
+}
+
+.matches-container h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.matches-list {
+  list-style: none;
+  padding: 0;
+}
+
+.matches-list li {
+  background: #ffffff;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #1f2937;
+}
+
+.scan-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  border: 2px solid #ef4444; /* Red border */
+  border-radius: 8px;
+  background: #ffffff;
+  color: #ef4444;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #fef2f2; /* Light red background */
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .scan-card {
+    padding: 24px;
+  }
+
+  .scan-title {
+    font-size: 1.8rem;
+  }
+
+  .scan-subtext {
+    font-size: 1.1rem;
+  }
+
+  .scan-description {
+    font-size: 0.9rem;
+  }
+
+  .scan-input {
+    font-size: 0.9rem;
+  }
+
+  .scan-button {
+    font-size: 1rem;
+  }
+
+  .scan-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logout-button, .credit-link {
+    font-size: 0.9rem;
+  }
+}
